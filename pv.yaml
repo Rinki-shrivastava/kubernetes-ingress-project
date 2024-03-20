@@ -11,4 +11,4 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   hostPath:
-    path: /mnt/data/nginx
+    path: /mnt/data/httpd

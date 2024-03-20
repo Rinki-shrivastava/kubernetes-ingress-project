@@ -1,17 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: pod1
 spec:
   containers:
-  - name: nginx
-    image: nginx
-    ports:
-    - containerPort: 80
+  - name: httpd-container
+    image: httpd
     volumeMounts:
-    - mountPath: /usr/share/nginx/html
-      name: nginx-pvc
+    - mountPath: /usr/local/apache2/htdocs
+      name: apache-pvc
   volumes:
-  - name: nginx-pvc
+  - name: apache-pvc
     persistentVolumeClaim:
       claimName: my-pvc
