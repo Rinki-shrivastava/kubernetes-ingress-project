@@ -4,7 +4,7 @@ metadata:
   name: pod2
 spec:
   containers:
-  - name: httpd-container-2
+  - name: httpd-container
     image: httpd
     volumeMounts:
     - mountPath: /usr/local/apache2/htdocs
